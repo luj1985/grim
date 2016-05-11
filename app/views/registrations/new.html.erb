@@ -1,0 +1,12 @@
+<h1>填写会员注册信息</h1>
+<main>
+  <%= form_for :registrations, html: {class: 'register form'} do |f| %>
+    <%= f.text_field :company, placeholder: '公司：' %>
+    <%= f.text_field :name, placeholder: '姓名：' %>
+    <%= f.telephone_field :telephone, placeholder: '电话：' %>
+    <%= f.email_field :email, placeholder: '邮箱：' %>
+    <%= f.text_field :duty, placeholder: '职务：' %>
+
+    <%= submit_tag("完成") %>
+  <% end %>
+</main>
