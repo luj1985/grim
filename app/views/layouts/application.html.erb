@@ -2,16 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="海科网是专注于海洋产业的综合性产业服务平台，整合上海市、长三角乃至全国海洋科技相关资源，包括：海洋科技成果、科研机构、服务机构、行业企业、专家人才、学协会、高端海洋论坛、产业政策等，未来将构建国内一流、国际领先的海洋科技创新服务公共支撑平台。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="海科网是专注于海洋产业的综合性产业服务平台，整合上海市、长三角乃至全国海洋科技相关资源，包括：海洋科技成果、科研机构、服务机构、行业企业、专家人才、学协会、高端海洋论坛、产业政策等，未来将构建国内一流、国际领先的海洋科技创新服务公共支撑平台。">
   <title>海科网</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= yield(:background).presence || 'default' %>">
 
 <%= yield %>
 

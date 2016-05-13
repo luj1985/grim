@@ -26,31 +26,124 @@ html, body {
   margin: 0;
 }
 
+html {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+  footer.join .button {
+    padding-top: 52px !important;
+  }
+}
+
 body {
   background-image: url(<%= asset_path 'background.jpg' %>);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
-  font-size: 12px;
   color: white;
 }
 
-header.logo {
-  margin-top: 20px;
+body.register, body.finished {
+  background-image: url(<%= asset_path 'background.dark.jpg' %>);
+}
+
+body.admin {
+  background-image: none;
+  color: black;
+}
+
+header {
   display: block;
   text-align: center;
-
-  img {
-    width: 237px;
-  }
 }
 
 main {
-  padding: 12px;
+  padding: 0 1rem;
+}
+main.finished {
+  padding: 0 2.5rem;
+}
+
+table {
+  margin: 0 4rem;
+}
+
+p {
+  line-height: 1.5rem;
+  text-indent: 1rem;
+}
+
+p.message {
+  text-align: center;
+  text-indent: 0;
+}
+
+p.follow {
+  margin: 6rem 0 2rem 0;
+  padding-left: 4rem;
+}
+p.follow::before {
+  content: ' ';
+  background-image: url(<%= asset_path 'down.png' %>);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  transform: translate(-4rem, -5px);
+}
+
+h1 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+h1.large {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  padding: 0 1rem;
+  font-weight: normal;
+}
+
+form {
+  padding: 1rem;
+}
+
+.field_with_errors input {
+  border-color: red;
+}
+
+input {
+  margin: 1rem auto;
+  font-size: 1rem;
+  padding: .8rem .5rem;
+  display: block;
+  width: 18rem;
+}
+
+input[type="submit"] {
+  margin-top: 5rem;
+  background-color: rgb(25,205, 253);
+  border-style: none;
+  font-size: 1.7rem;
+  color: white;
+  width: 12rem;
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 h3::before {
@@ -63,6 +156,20 @@ h3::before {
   transform: translateY(2px);
 }
 
+img.logo {
+  margin-top: 70px;
+  width: 220px;
+}
+
+img.welcome {
+  margin-top: 90px;
+  width: 190px;
+}
+
+img.wechat.qr {
+  width: 14rem;
+}
+
 ul.items {
   list-style: none;
   padding: 0;
@@ -71,65 +178,28 @@ ul.items {
     margin: 4px 0;
   }
   p {
-    padding-left: 16px;
     margin: 4px 0;
   }
 }
-
-main.home {
-  h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-  h1.en {
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-}
-
-footer.join {
+footer {
   text-align: center;
-  .button {
-  	display: inline-block;
-  	width: 120px;
-  	height: 120px;
-  	background-image: url(<%= asset_path 'button.png' %>);
-  	background-repeat: no-repeat;
-  	background-position: top;
-	background-size: 100%;
-	padding-top: 50px;
-	color: white;
-  }
+}
+
+footer .button {
+  display: inline-block;
+  font-size: 1em;
+  width: 150px;
+  height: 150px;
+  background-image: url(<%= asset_path 'button.png' %>);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  padding: 48px 0 0 4px;
+  color: white;
+  text-decoration: none;
 }
 
 
 
 
 
-
-.register.form {
-  padding: 14px;
-  input {
-    margin: 4px auto;
-    font-size: 16px;
-    padding: 4px;
-    display: block;
-    width: 240px;
-  }
-
-  input[type="submit"] {
-    margin-top: 30px;
-    background-color: rgb(25,205, 253);
-    border-style: none;
-    width: 120px;
-  }
-}
-
-
-
-.wechat.qr {
-  text-align: center;
-  img {
-    width: 150px;
-  }
-}
