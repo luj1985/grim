@@ -142,19 +142,36 @@ form {
   border-color: red;
 }
 
+.errors_container {
+  text-align: center;
+  border: 1px solid red;
+}
+
+.error_explanation {
+  display: inline-block;
+  text-align: left;
+  h2 {
+    margin-bottom: .5rem;
+  }
+}
+
 input {
   margin: 1rem auto;
   font-size: 1rem;
   padding: .8rem .5rem;
   display: block;
   width: 18rem;
+  border-radius: 0;
 }
 
 input[type="submit"] {
   margin-top: 5rem;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
   background-color: rgb(25,205, 253);
   border-style: none;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: white;
   width: 12rem;
 }
