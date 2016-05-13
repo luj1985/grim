@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/export'
+
   get 'welcome/index'
 
   resources :registrations
