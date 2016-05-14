@@ -4,6 +4,10 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new
   end
 
+  def show
+    render 'finished'
+  end
+
   def index
     redirect_to "/"
   end

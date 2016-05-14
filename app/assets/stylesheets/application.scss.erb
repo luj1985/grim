@@ -100,10 +100,16 @@ p.message {
   text-indent: 0;
 }
 
-p.follow {
+p.message.follow {
   margin: 6rem 0 2rem 0;
   padding-left: 4rem;
 }
+
+p.follow span {
+  text-align: left;
+  display: inline-block;
+}
+
 p.follow::before {
   content: ' ';
   background-image: url(<%= asset_path 'down.png' %>);
