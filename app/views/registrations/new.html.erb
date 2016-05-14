@@ -1,25 +1,12 @@
 <% content_for :background do %>register<% end %>
 <h1>填写会员注册信息</h1>
 <main>
-  <% if @registration.errors.any? %>
-  <div class="errors_container">
-  <div class="error_explanation">
-    <h2>有错误发生，不能保存</h2>
-    <ul>
-      <% @registration.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-  </div>
-  <% end %>
   <%= form_for @registration, url: { action: "create" } do |f| %>
-    <%= f.text_field :company, placeholder: '公司：' %>
-    <%= f.text_field :name, placeholder: '姓名：' %>
-    <%= f.telephone_field :telephone, placeholder: '电话：' %>
-    <%= f.email_field :email, placeholder: '邮箱：' %>
-    <%= f.text_field :duty, placeholder: '职务：' %>
-
+    <%= f.text_field :company, placeholder: pl(:company) %>
+    <%= f.text_field :name, placeholder: pl(:name) %>
+    <%= f.text_field :duty, placeholder: pl(:duty) %>
+    <%= f.telephone_field :telephone, placeholder: pl(:telephone) %>
+    <%= f.email_field :email, placeholder: pl(:email) %>
     <%= submit_tag("完 成") %>
   <% end %>
 </main>
